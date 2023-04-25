@@ -1,0 +1,11 @@
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\bin\Debug\Basic GUI 1.exe.config
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\bin\Debug\Basic GUI 1.exe
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\bin\Debug\Basic GUI 1.pdb
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.csproj.AssemblyReference.cache
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic_GUI_1.Form1.resources
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic_GUI_1.Properties.Resources.resources
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.csproj.GenerateResource.cache
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.csproj.CoreCompileInputs.cache
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.exe
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.pdb
