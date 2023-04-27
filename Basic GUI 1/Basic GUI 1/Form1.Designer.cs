@@ -59,6 +59,7 @@
             this.buttonNE.TabIndex = 0;
             this.buttonNE.Text = "North East";
             this.buttonNE.UseVisualStyleBackColor = false;
+            this.buttonNE.Click += new System.EventHandler(this.buttonNE_Click);
             // 
             // buttonE
             // 
@@ -71,6 +72,7 @@
             this.buttonE.TabIndex = 1;
             this.buttonE.Text = "East";
             this.buttonE.UseVisualStyleBackColor = false;
+            this.buttonE.Click += new System.EventHandler(this.buttonE_Click);
             // 
             // buttonSE
             // 
@@ -83,6 +85,7 @@
             this.buttonSE.TabIndex = 2;
             this.buttonSE.Text = "South East";
             this.buttonSE.UseVisualStyleBackColor = false;
+            this.buttonSE.Click += new System.EventHandler(this.buttonSE_Click);
             // 
             // buttonSW
             // 
@@ -95,6 +98,7 @@
             this.buttonSW.TabIndex = 5;
             this.buttonSW.Text = "South West";
             this.buttonSW.UseVisualStyleBackColor = false;
+            this.buttonSW.Click += new System.EventHandler(this.buttonSW_Click);
             // 
             // buttonW
             // 
@@ -107,6 +111,7 @@
             this.buttonW.TabIndex = 4;
             this.buttonW.Text = "West";
             this.buttonW.UseVisualStyleBackColor = false;
+            this.buttonW.Click += new System.EventHandler(this.buttonW_Click);
             // 
             // buttonNW
             // 
@@ -119,6 +124,7 @@
             this.buttonNW.TabIndex = 3;
             this.buttonNW.Text = "North West";
             this.buttonNW.UseVisualStyleBackColor = false;
+            this.buttonNW.Click += new System.EventHandler(this.buttonNW_Click);
             // 
             // Form1
             // 
