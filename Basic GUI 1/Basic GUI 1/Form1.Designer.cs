@@ -139,6 +139,7 @@
             this.Controls.Add(this.buttonE);
             this.Controls.Add(this.buttonNE);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
