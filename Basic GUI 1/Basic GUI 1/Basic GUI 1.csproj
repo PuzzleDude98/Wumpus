@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wumpus Background.jpg" />
+    <None Include="Resources\RDAS.jpg" />
     <Content Include="Wumpus Background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

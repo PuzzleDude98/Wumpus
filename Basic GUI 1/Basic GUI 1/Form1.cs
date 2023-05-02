@@ -15,39 +15,62 @@ namespace Basic_GUI_1
     public partial class Form1 : Form
     {
 
-        private Region TriangleControl(int p11, int p12, int p21, int p22, int p31, int p32)
+        private Region TriangleControl(Size size, string D)
         {
-            var path = new GraphicsPath();
-            Point[] points = { new Point(p11, p12), new Point(p21, p22), new Point(p31, p32) };
-            path.AddLines(points);
+            GraphicsPath path = new GraphicsPath();
+            if (D == "R")
+            {
+                Point[] points = { new Point(0, 0), new Point(size.Width, size.Height / 2), new Point(0, size.Height) };
+                path.AddLines(points);
+            }
+            else
+            {
+                Point[] points = { new Point(0, size.Height/2), new Point(size.Width, 0), new Point(size.Width, size.Height) };
+                path.AddLines(points);
+            }
             return new Region(path);
         }
+
+        public void DefineButtons()
+        {
+            buttonNE.Region = TriangleControl(buttonNE.Size, "R");
+
+            buttonE.Region = TriangleControl(buttonE.Size, "L");
+
+            buttonSE.Region = TriangleControl(buttonSE.Size, "R");
+
+            buttonNW.Region = TriangleControl(buttonNW.Size, "L");
+
+            buttonW.Region = TriangleControl(buttonW.Size, "R");
+
+            buttonSW.Region = TriangleControl(buttonSW.Size, "L");
+        }
+
+        double Ratio;
 
         public Form1()
         {
             InitializeComponent();
 
-            buttonNE.Region = TriangleControl(0, 0, 220, 125, 0, 250);
+            DefineButtons();
 
-            buttonE.Region = TriangleControl(0, 125, 220, 0, 220, 250);
+            Ratio = this.Size.Height / this.Size.Width;
+        }
 
-            buttonSE.Region = TriangleControl(0, 0, 0, 250, 220, 125);
+        private void MakeHexagon()
+        {
 
-            buttonNW.Region = TriangleControl(220, 0, 220, 250, 0, 125);
-
-            buttonW.Region = TriangleControl(0, 0, 0, 250, 220, 125);
-
-            buttonSW.Region = TriangleControl(0, 125, 220, 0, 220, 250);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Point[] HexPoints = { new Point(470, 0), new Point(690, 125), new Point(690, 375), new Point(470, 500), new Point(250, 375), new Point(250, 125) };
-            Pen blackpen = new Pen(Color.Black,2);
-            e.Graphics.DrawPolygon(blackpen, HexPoints);
+            //Point[] HexPoints = { new Point(470, 0), new Point(690, 125), new Point(690, 375), new Point(470, 500), new Point(250, 375), new Point(250, 125) };
+            //Pen blackpen = new Pen(Color.Black,2);
+            //e.Graphics.DrawPolygon(blackpen, HexPoints);
+            //e.Graphics.FillPolygon(Brushes.Tan, HexPoints);
         }
 
-        private void Move(int x, int y)
+        private void MovePlayer(int x, int y)
         {
 
         }
@@ -82,5 +105,21 @@ namespace Basic_GUI_1
             MessageBox.Show("You moved southwest!");
         }
 
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+        }
+
+        private void Form1_ResizeBegin(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Point[] HexPoints = { new Point(panel1.Size.Width / 2, 0), new Point(panel1.Size.Width - 20, panel1.Size.Height / 4), new Point(panel1.Size.Width - 20, panel1.Size.Height / 4 * 3), new Point(panel1.Size.Width / 2, panel1.Size.Height), new Point(20, panel1.Size.Height / 4 * 3), new Point(20, panel1.Size.Height / 4) };
+            Pen blackpen = new Pen(Color.Black, 5);
+            e.Graphics.DrawPolygon(blackpen, HexPoints);
+            e.Graphics.FillPolygon(Brushes.Tan, HexPoints);
+        }
     }
 }

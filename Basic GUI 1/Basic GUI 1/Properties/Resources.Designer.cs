@@ -63,6 +63,16 @@ namespace Basic_GUI_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RDAS {
+            get {
+                object obj = ResourceManager.GetObject("RDAS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wumpus_Background {
             get {
                 object obj = ResourceManager.GetObject("Wumpus Background", resourceCulture);
