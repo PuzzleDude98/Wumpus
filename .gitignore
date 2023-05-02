@@ -396,6 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-Basic GUI 1/.vs/Basic GUI 1/v17/.suo
-Basic GUI 1/.vs/Basic GUI 1/v17/.suo
-Basic GUI 1/.vs/Basic GUI 1/v17/.suo
+*.suo
