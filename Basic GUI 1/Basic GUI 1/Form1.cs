@@ -80,31 +80,37 @@ namespace Basic_GUI_1
         private void buttonNE_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " northeast!");
+            ResetShoot();
         }
 
         private void buttonE_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " east!");
+            ResetShoot();
         }
 
         private void buttonSE_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " southeast!");
+            ResetShoot();
         }
 
         private void buttonNW_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " northwest!");
+            ResetShoot();
         }
 
         private void buttonW_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " west!");
+            ResetShoot();
         }
 
         private void buttonSW_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You " + Action + " southwest!");
+            ResetShoot();
         }
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
@@ -137,9 +143,14 @@ namespace Basic_GUI_1
         {
             if (e.KeyCode == Keys.ShiftKey)
             {
-                labelCharacter.Text = "Standing Animation";
-                Action = "moved";
+                ResetShoot();
             }
+        }
+
+        private void ResetShoot()
+        {
+            labelCharacter.Text = "Standing Animation";
+            Action = "moved";
         }
 
         private void buttonArrows_Click(object sender, EventArgs e)
@@ -158,5 +169,10 @@ namespace Basic_GUI_1
             HideHint.Enabled = false;
         }
 
+        private void Form1_Leave(object sender, EventArgs e)
+        {
+            labelCharacter.Text = "Standing Animation";
+            Action = "moved";
+        }
     }
 }
