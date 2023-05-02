@@ -39,6 +39,11 @@
             this.buttonW = new System.Windows.Forms.Button();
             this.buttonNW = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelCharacter = new System.Windows.Forms.Label();
+            this.labelShoot = new System.Windows.Forms.Label();
+            this.buttonArrows = new System.Windows.Forms.Button();
+            this.buttonSecret = new System.Windows.Forms.Button();
+            this.HideHint = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,6 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.labelCharacter);
             this.panel1.Controls.Add(this.buttonSW);
             this.panel1.Controls.Add(this.buttonNW);
             this.panel1.Controls.Add(this.buttonW);
@@ -154,6 +160,50 @@
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // labelCharacter
+            // 
+            this.labelCharacter.AutoSize = true;
+            this.labelCharacter.Location = new System.Drawing.Point(200, 243);
+            this.labelCharacter.Name = "labelCharacter";
+            this.labelCharacter.Size = new System.Drawing.Size(98, 13);
+            this.labelCharacter.TabIndex = 9;
+            this.labelCharacter.Text = "Standing Animation";
+            // 
+            // labelShoot
+            // 
+            this.labelShoot.AutoSize = true;
+            this.labelShoot.Location = new System.Drawing.Point(69, 45);
+            this.labelShoot.Name = "labelShoot";
+            this.labelShoot.Size = new System.Drawing.Size(100, 13);
+            this.labelShoot.TabIndex = 8;
+            this.labelShoot.Text = "Press Shift to Shoot";
+            // 
+            // buttonArrows
+            // 
+            this.buttonArrows.Location = new System.Drawing.Point(785, 45);
+            this.buttonArrows.Name = "buttonArrows";
+            this.buttonArrows.Size = new System.Drawing.Size(75, 23);
+            this.buttonArrows.TabIndex = 9;
+            this.buttonArrows.Text = "Buy Arrows";
+            this.buttonArrows.UseVisualStyleBackColor = true;
+            this.buttonArrows.Click += new System.EventHandler(this.buttonArrows_Click);
+            // 
+            // buttonSecret
+            // 
+            this.buttonSecret.Location = new System.Drawing.Point(785, 91);
+            this.buttonSecret.Name = "buttonSecret";
+            this.buttonSecret.Size = new System.Drawing.Size(75, 23);
+            this.buttonSecret.TabIndex = 10;
+            this.buttonSecret.Text = "Buy Secret";
+            this.buttonSecret.UseVisualStyleBackColor = true;
+            this.buttonSecret.Click += new System.EventHandler(this.buttonSecret_Click);
+            // 
+            // HideHint
+            // 
+            this.HideHint.Enabled = true;
+            this.HideHint.Interval = 3000;
+            this.HideHint.Tick += new System.EventHandler(this.HideHint_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,15 +211,23 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.buttonSecret);
+            this.Controls.Add(this.buttonArrows);
+            this.Controls.Add(this.labelShoot);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI";
             this.ResizeBegin += new System.EventHandler(this.Form1_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -184,6 +242,11 @@
         private System.Windows.Forms.Button buttonW;
         private System.Windows.Forms.Button buttonNW;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelShoot;
+        private System.Windows.Forms.Label labelCharacter;
+        private System.Windows.Forms.Button buttonArrows;
+        private System.Windows.Forms.Button buttonSecret;
+        private System.Windows.Forms.Timer HideHint;
     }
 }
 

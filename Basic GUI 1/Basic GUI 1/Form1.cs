@@ -25,7 +25,7 @@ namespace Basic_GUI_1
             }
             else
             {
-                Point[] points = { new Point(0, size.Height/2), new Point(size.Width, 0), new Point(size.Width, size.Height) };
+                Point[] points = { new Point(0, size.Height / 2), new Point(size.Width, 0), new Point(size.Width, size.Height) };
                 path.AddLines(points);
             }
             return new Region(path);
@@ -47,6 +47,8 @@ namespace Basic_GUI_1
         }
 
         double Ratio;
+
+        string Action = "moved";
 
         public Form1()
         {
@@ -77,32 +79,32 @@ namespace Basic_GUI_1
 
         private void buttonNE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved northeast!");
+            MessageBox.Show("You " + Action + " northeast!");
         }
 
         private void buttonE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved east!");
+            MessageBox.Show("You " + Action + " east!");
         }
 
         private void buttonSE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved southeast!");
+            MessageBox.Show("You " + Action + " southeast!");
         }
 
         private void buttonNW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved northwest!");
+            MessageBox.Show("You " + Action + " northwest!");
         }
 
         private void buttonW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved west!");
+            MessageBox.Show("You " + Action + " west!");
         }
 
         private void buttonSW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You moved southwest!");
+            MessageBox.Show("You " + Action + " southwest!");
         }
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
@@ -121,5 +123,40 @@ namespace Basic_GUI_1
             e.Graphics.DrawPolygon(blackpen, HexPoints);
             e.Graphics.FillPolygon(Brushes.Tan, HexPoints);
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+            {
+                labelCharacter.Text = "Shooting Animation";
+                Action = "shot";
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+            {
+                labelCharacter.Text = "Standing Animation";
+                Action = "moved";
+            }
+        }
+
+        private void buttonArrows_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Arrow purchase here");
+        }
+
+        private void buttonSecret_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Secret purchase here");
+        }
+
+        private void HideHint_Tick(object sender, EventArgs e)
+        {
+            labelShoot.Visible = false;
+            HideHint.Enabled = false;
+        }
+
     }
 }
