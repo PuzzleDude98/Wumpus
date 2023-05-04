@@ -39,12 +39,14 @@
             this.buttonW = new System.Windows.Forms.Button();
             this.buttonNW = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelCharacter = new System.Windows.Forms.Label();
             this.labelShoot = new System.Windows.Forms.Label();
             this.buttonArrows = new System.Windows.Forms.Button();
             this.buttonSecret = new System.Windows.Forms.Button();
             this.HideHint = new System.Windows.Forms.Timer(this.components);
+            this.labelRoom = new System.Windows.Forms.Label();
+            this.pictureBoxCharacter = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCharacter)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -147,7 +149,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelCharacter);
+            this.panel1.Controls.Add(this.labelRoom);
+            this.panel1.Controls.Add(this.pictureBoxCharacter);
             this.panel1.Controls.Add(this.buttonSW);
             this.panel1.Controls.Add(this.buttonNW);
             this.panel1.Controls.Add(this.buttonW);
@@ -159,15 +162,6 @@
             this.panel1.Size = new System.Drawing.Size(480, 500);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // labelCharacter
-            // 
-            this.labelCharacter.AutoSize = true;
-            this.labelCharacter.Location = new System.Drawing.Point(200, 243);
-            this.labelCharacter.Name = "labelCharacter";
-            this.labelCharacter.Size = new System.Drawing.Size(98, 13);
-            this.labelCharacter.TabIndex = 9;
-            this.labelCharacter.Text = "Standing Animation";
             // 
             // labelShoot
             // 
@@ -204,6 +198,30 @@
             this.HideHint.Interval = 3000;
             this.HideHint.Tick += new System.EventHandler(this.HideHint_Tick);
             // 
+            // labelRoom
+            // 
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoom.Location = new System.Drawing.Point(221, 206);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(35, 43);
+            this.labelRoom.TabIndex = 7;
+            this.labelRoom.Text = "1";
+            this.labelRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxCharacter
+            // 
+            this.pictureBoxCharacter.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCharacter.ErrorImage = global::Basic_GUI_1.Properties.Resources.Angry;
+            this.pictureBoxCharacter.Image = global::Basic_GUI_1.Properties.Resources.Back;
+            this.pictureBoxCharacter.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCharacter.InitialImage")));
+            this.pictureBoxCharacter.Location = new System.Drawing.Point(198, 288);
+            this.pictureBoxCharacter.Name = "pictureBoxCharacter";
+            this.pictureBoxCharacter.Size = new System.Drawing.Size(100, 200);
+            this.pictureBoxCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxCharacter.TabIndex = 6;
+            this.pictureBoxCharacter.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,11 +240,12 @@
             this.ResizeBegin += new System.EventHandler(this.Form1_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.Leave += new System.EventHandler(this.Form1_Leave);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.Leave += new System.EventHandler(this.Form1_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCharacter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,10 +263,11 @@
         private System.Windows.Forms.Button buttonNW;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelShoot;
-        private System.Windows.Forms.Label labelCharacter;
         private System.Windows.Forms.Button buttonArrows;
         private System.Windows.Forms.Button buttonSecret;
         private System.Windows.Forms.Timer HideHint;
+        private System.Windows.Forms.PictureBox pictureBoxCharacter;
+        private System.Windows.Forms.Label labelRoom;
     }
 }
 

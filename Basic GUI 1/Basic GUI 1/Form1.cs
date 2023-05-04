@@ -134,7 +134,7 @@ namespace Basic_GUI_1
         {
             if (e.KeyCode == Keys.ShiftKey)
             {
-                labelCharacter.Text = "Shooting Animation";
+                pictureBoxCharacter.Image = Properties.Resources.Front;
                 Action = "shot";
             }
         }
@@ -149,7 +149,7 @@ namespace Basic_GUI_1
 
         private void ResetShoot()
         {
-            labelCharacter.Text = "Standing Animation";
+            pictureBoxCharacter.Image = Properties.Resources.Back;
             Action = "moved";
         }
 
@@ -171,7 +171,7 @@ namespace Basic_GUI_1
 
         private void Form1_Leave(object sender, EventArgs e)
         {
-            labelCharacter.Text = "Standing Animation";
+            pictureBoxCharacter.Image = Properties.Resources.Back;
             Action = "moved";
         }
     }

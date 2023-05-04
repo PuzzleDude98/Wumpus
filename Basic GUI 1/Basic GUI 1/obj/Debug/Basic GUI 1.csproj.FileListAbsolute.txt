@@ -9,3 +9,7 @@ C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.cs
 C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.csproj.CoreCompileInputs.cache
 C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.exe
 C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.pdb
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\bin\Debug\Basic GUI 1.exe.manifest
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\bin\Debug\Basic GUI 1.application
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.exe.manifest
+C:\Users\1097232\Desktop\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.application
