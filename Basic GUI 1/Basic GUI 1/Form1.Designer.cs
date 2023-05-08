@@ -1,4 +1,8 @@
-﻿namespace Basic_GUI_1
+﻿using System.Drawing.Drawing2D;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Basic_GUI_1
 {
     partial class Form1
     {
@@ -39,12 +43,13 @@
             this.buttonW = new System.Windows.Forms.Button();
             this.buttonNW = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelRoom = new System.Windows.Forms.Label();
+            this.pictureBoxCharacter = new System.Windows.Forms.PictureBox();
             this.labelShoot = new System.Windows.Forms.Label();
             this.buttonArrows = new System.Windows.Forms.Button();
             this.buttonSecret = new System.Windows.Forms.Button();
             this.HideHint = new System.Windows.Forms.Timer(this.components);
-            this.labelRoom = new System.Windows.Forms.Label();
-            this.pictureBoxCharacter = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCharacter)).BeginInit();
             this.SuspendLayout();
@@ -163,6 +168,29 @@
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // labelRoom
+            // 
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoom.Location = new System.Drawing.Point(231, 231);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(35, 43);
+            this.labelRoom.TabIndex = 7;
+            this.labelRoom.Text = "1";
+            this.labelRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxCharacter
+            // 
+            this.pictureBoxCharacter.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCharacter.Image = global::Basic_GUI_1.Properties.Resources.PlainFront;
+            this.pictureBoxCharacter.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCharacter.InitialImage")));
+            this.pictureBoxCharacter.Location = new System.Drawing.Point(196, 299);
+            this.pictureBoxCharacter.Name = "pictureBoxCharacter";
+            this.pictureBoxCharacter.Size = new System.Drawing.Size(100, 200);
+            this.pictureBoxCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCharacter.TabIndex = 6;
+            this.pictureBoxCharacter.TabStop = false;
+            // 
             // labelShoot
             // 
             this.labelShoot.AutoSize = true;
@@ -197,30 +225,6 @@
             this.HideHint.Enabled = true;
             this.HideHint.Interval = 3000;
             this.HideHint.Tick += new System.EventHandler(this.HideHint_Tick);
-            // 
-            // labelRoom
-            // 
-            this.labelRoom.AutoSize = true;
-            this.labelRoom.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRoom.Location = new System.Drawing.Point(221, 206);
-            this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(35, 43);
-            this.labelRoom.TabIndex = 7;
-            this.labelRoom.Text = "1";
-            this.labelRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBoxCharacter
-            // 
-            this.pictureBoxCharacter.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxCharacter.ErrorImage = global::Basic_GUI_1.Properties.Resources.Angry;
-            this.pictureBoxCharacter.Image = global::Basic_GUI_1.Properties.Resources.Back;
-            this.pictureBoxCharacter.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCharacter.InitialImage")));
-            this.pictureBoxCharacter.Location = new System.Drawing.Point(198, 288);
-            this.pictureBoxCharacter.Name = "pictureBoxCharacter";
-            this.pictureBoxCharacter.Size = new System.Drawing.Size(100, 200);
-            this.pictureBoxCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxCharacter.TabIndex = 6;
-            this.pictureBoxCharacter.TabStop = false;
             // 
             // Form1
             // 
@@ -268,6 +272,7 @@
         private System.Windows.Forms.Timer HideHint;
         private System.Windows.Forms.PictureBox pictureBoxCharacter;
         private System.Windows.Forms.Label labelRoom;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

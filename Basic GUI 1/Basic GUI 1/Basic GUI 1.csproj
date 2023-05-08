@@ -61,6 +61,7 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -111,10 +112,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Wumpus Background.jpg" />
-    <None Include="Resources\Angry.jpg" />
     <None Include="Resources\Front.jpg" />
     <None Include="Resources\Back.jpg" />
+    <None Include="Resources\MapBack.jpg" />
+    <None Include="Resources\BenBack.png" />
+    <None Include="Resources\BenFront.png" />
+    <None Include="Resources\BowBack.png" />
+    <None Include="Resources\BowFront.png" />
+    <None Include="Resources\Front.png" />
+    <None Include="Resources\PlainBack.png" />
+    <None Include="Resources\PlainFront.png" />
+    <None Include="Resources\RedshirtBack.png" />
+    <None Include="Resources\RedshirtFront.png" />
     <Content Include="Wumpus Background.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -134,8 +134,12 @@ namespace Basic_GUI_1
         {
             if (e.KeyCode == Keys.ShiftKey)
             {
-                pictureBoxCharacter.Image = Properties.Resources.Front;
+                pictureBoxCharacter.Image = Properties.Resources.PlainFront;
                 Action = "shot";
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                pictureBoxCharacter.Location = new Point(pictureBoxCharacter.Location.X-1, pictureBoxCharacter.Location.Y);
             }
         }
 
@@ -149,7 +153,7 @@ namespace Basic_GUI_1
 
         private void ResetShoot()
         {
-            pictureBoxCharacter.Image = Properties.Resources.Back;
+            pictureBoxCharacter.Image = Properties.Resources.PlainBack;
             Action = "moved";
         }
 
@@ -171,7 +175,7 @@ namespace Basic_GUI_1
 
         private void Form1_Leave(object sender, EventArgs e)
         {
-            pictureBoxCharacter.Image = Properties.Resources.Back;
+            pictureBoxCharacter.Image = Properties.Resources.PlainBack;
             Action = "moved";
         }
     }
