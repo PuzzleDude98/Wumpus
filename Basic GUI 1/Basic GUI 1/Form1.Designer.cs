@@ -44,12 +44,13 @@ namespace Basic_GUI_1
             this.buttonNW = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelRoom = new System.Windows.Forms.Label();
-            this.pictureBoxCharacter = new System.Windows.Forms.PictureBox();
             this.labelShoot = new System.Windows.Forms.Label();
             this.buttonArrows = new System.Windows.Forms.Button();
             this.buttonSecret = new System.Windows.Forms.Button();
             this.HideHint = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonCharacter = new System.Windows.Forms.Button();
+            this.pictureBoxCharacter = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCharacter)).BeginInit();
             this.SuspendLayout();
@@ -179,18 +180,6 @@ namespace Basic_GUI_1
             this.labelRoom.Text = "1";
             this.labelRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxCharacter
-            // 
-            this.pictureBoxCharacter.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxCharacter.Image = global::Basic_GUI_1.Properties.Resources.PlainFront;
-            this.pictureBoxCharacter.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCharacter.InitialImage")));
-            this.pictureBoxCharacter.Location = new System.Drawing.Point(196, 299);
-            this.pictureBoxCharacter.Name = "pictureBoxCharacter";
-            this.pictureBoxCharacter.Size = new System.Drawing.Size(100, 200);
-            this.pictureBoxCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCharacter.TabIndex = 6;
-            this.pictureBoxCharacter.TabStop = false;
-            // 
             // labelShoot
             // 
             this.labelShoot.AutoSize = true;
@@ -226,6 +215,28 @@ namespace Basic_GUI_1
             this.HideHint.Interval = 3000;
             this.HideHint.Tick += new System.EventHandler(this.HideHint_Tick);
             // 
+            // buttonCharacter
+            // 
+            this.buttonCharacter.Location = new System.Drawing.Point(33, 205);
+            this.buttonCharacter.Name = "buttonCharacter";
+            this.buttonCharacter.Size = new System.Drawing.Size(116, 32);
+            this.buttonCharacter.TabIndex = 11;
+            this.buttonCharacter.Text = "Switch Character";
+            this.buttonCharacter.UseVisualStyleBackColor = true;
+            this.buttonCharacter.Click += new System.EventHandler(this.buttonCharacter_Click);
+            // 
+            // pictureBoxCharacter
+            // 
+            this.pictureBoxCharacter.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCharacter.Image = global::Basic_GUI_1.Properties.Resources.PlainBack;
+            this.pictureBoxCharacter.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCharacter.InitialImage")));
+            this.pictureBoxCharacter.Location = new System.Drawing.Point(196, 299);
+            this.pictureBoxCharacter.Name = "pictureBoxCharacter";
+            this.pictureBoxCharacter.Size = new System.Drawing.Size(100, 200);
+            this.pictureBoxCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCharacter.TabIndex = 6;
+            this.pictureBoxCharacter.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +244,7 @@ namespace Basic_GUI_1
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.buttonCharacter);
             this.Controls.Add(this.buttonSecret);
             this.Controls.Add(this.buttonArrows);
             this.Controls.Add(this.labelShoot);
@@ -273,6 +285,7 @@ namespace Basic_GUI_1
         private System.Windows.Forms.PictureBox pictureBoxCharacter;
         private System.Windows.Forms.Label labelRoom;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button buttonCharacter;
     }
 }
 

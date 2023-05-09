@@ -28,3 +28,4 @@ C:\Users\1097232\source\repos\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI
 C:\Users\1097232\source\repos\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.application
 C:\Users\1097232\source\repos\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.exe
 C:\Users\1097232\source\repos\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic GUI 1.pdb
+C:\Users\1097232\source\repos\Wumpus\Basic GUI 1\Basic GUI 1\obj\Debug\Basic_GUI_1.CharacterSelect.resources

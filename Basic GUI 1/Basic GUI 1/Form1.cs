@@ -59,6 +59,8 @@ namespace Basic_GUI_1
             Ratio = this.Size.Height / this.Size.Width;
         }
 
+        string Costume = "Plain";
+
         private void MakeHexagon()
         {
 
@@ -134,12 +136,8 @@ namespace Basic_GUI_1
         {
             if (e.KeyCode == Keys.ShiftKey)
             {
-                pictureBoxCharacter.Image = Properties.Resources.PlainFront;
+                pictureBoxCharacter.Image = Properties.Resources.ResourceManager.GetObject(Costume + "Front") as Image;
                 Action = "shot";
-            }
-            if (e.KeyCode == Keys.Left)
-            {
-                pictureBoxCharacter.Location = new Point(pictureBoxCharacter.Location.X-1, pictureBoxCharacter.Location.Y);
             }
         }
 
@@ -153,7 +151,7 @@ namespace Basic_GUI_1
 
         private void ResetShoot()
         {
-            pictureBoxCharacter.Image = Properties.Resources.PlainBack;
+            pictureBoxCharacter.Image = Properties.Resources.ResourceManager.GetObject(Costume + "Back") as Image;
             Action = "moved";
         }
 
@@ -175,8 +173,16 @@ namespace Basic_GUI_1
 
         private void Form1_Leave(object sender, EventArgs e)
         {
-            pictureBoxCharacter.Image = Properties.Resources.PlainBack;
+            pictureBoxCharacter.Image = Properties.Resources.ResourceManager.GetObject(Costume + "Front") as Image;
             Action = "moved";
+        }
+
+        private void buttonCharacter_Click(object sender, EventArgs e)
+        {
+            CharacterSelect characterSelect = new CharacterSelect();
+            characterSelect.ShowDialog();
+            Costume = characterSelect.Costume;
+            ResetShoot();
         }
     }
 }
