@@ -15,12 +15,10 @@ namespace _2023975_Mejia_CaveSystem
         public byte[,] CaveRoute { get; set; }
 
 
-        public Cave(byte RouteNum)
+        public Cave(int RouteNum)
         {
             CaveRoute = (byte[,])Deserialize("CaveRoute" + RouteNum.ToString() + ".txt");
         }
-
-        byte[,] CavePath = new byte[31, 3];
 
         public static object Deserialize(string path)
         {
@@ -34,9 +32,9 @@ namespace _2023975_Mejia_CaveSystem
         public byte[] GetExits(int index)
         {
             byte[] exits = new byte[3];
-            exits[0] = CavePath[index, 0];
-            exits[1] = CavePath[index, 1];
-            exits[2] = CavePath[index, 2];  
+            exits[0] = CaveRoute[index, 0];
+            exits[1] = CaveRoute[index, 1];
+            exits[2] = CaveRoute[index, 2];  
             return exits;
         }
 

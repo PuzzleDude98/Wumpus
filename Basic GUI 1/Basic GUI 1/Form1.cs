@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2023975_Mejia_CaveSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,6 +59,8 @@ namespace Basic_GUI_1
 
             Ratio = this.Size.Height / this.Size.Width;
         }
+
+        Cave cave = new Cave(1);
 
         string Costume = "Plain";
 
