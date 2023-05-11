@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HuntTheWumpus;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,20 +48,16 @@ namespace Basic_GUI_1
             buttonSW.Region = TriangleControl(buttonSW.Size, "L");
         }
 
-        double Ratio;
-
-        string Action = "moved";
-
         public Form1()
         {
             InitializeComponent();
-
             DefineButtons();
-
-            Ratio = this.Size.Height / this.Size.Width;
         }
 
+        string Action = "moved";
         string Costume = "Plain";
+        Random random = new Random();
+        Game game = new Game(5,1,4);
 
         private void MakeHexagon()
         {
@@ -74,54 +72,40 @@ namespace Basic_GUI_1
             //e.Graphics.FillPolygon(Brushes.Tan, HexPoints);
         }
 
-        private void MovePlayer(int x, int y)
+        private void MovePlayer(string direction)
         {
-
+            MessageBox.Show("You " + Action + direction+"!");
+            ResetShoot();
         }
 
         private void buttonNE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " northeast!");
-            ResetShoot();
+            MovePlayer("northeast");
         }
 
         private void buttonE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " east!");
-            ResetShoot();
+            MovePlayer("east");
         }
 
         private void buttonSE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " southeast!");
-            ResetShoot();
+            MovePlayer("southeast");
         }
 
         private void buttonNW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " northwest!");
-            ResetShoot();
+            MovePlayer("northwest");
         }
 
         private void buttonW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " west!");
-            ResetShoot();
+            MovePlayer("west");
         }
 
         private void buttonSW_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You " + Action + " southwest!");
-            ResetShoot();
-        }
-
-        private void Form1_ResizeEnd(object sender, EventArgs e)
-        {
-        }
-
-        private void Form1_ResizeBegin(object sender, EventArgs e)
-        {
-
+            MovePlayer("southwest");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
