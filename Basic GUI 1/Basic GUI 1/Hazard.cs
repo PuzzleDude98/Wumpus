@@ -41,15 +41,15 @@ namespace HuntTheWumpus
                 {
                     HazardMessage += "Wumpus is close\n";
                 }
-                else if (connection.Id == batRoom)
+                if (connection.Id == batRoom)
                 {
                     HazardMessage += "Bat is close\n";
                 }
-                else if (connection.Id == pitRoom)
+                if (connection.Id == pitRoom)
                 {
                     HazardMessage += "Pit is close\n";
                 }
-                else if (connection.Id == none)
+                if (connection.Id == none)
                 {
                     HazardMessage += "";
                 }
