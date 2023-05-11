@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cave.cs" />
     <Compile Include="CharacterSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +134,11 @@
     <None Include="Resources\PlainFront.png" />
     <None Include="Resources\RedshirtBack.png" />
     <None Include="Resources\RedshirtFront.png" />
+    <None Include="Resources\CaveRoute1.txt" />
+    <None Include="Resources\CaveRoute2.txt" />
+    <None Include="Resources\CaveRoute3.txt" />
+    <None Include="Resources\CaveRoute4.txt" />
+    <None Include="Resources\CaveRoute5.txt" />
     <Content Include="Wumpus Background.jpg" />
   </ItemGroup>
   <ItemGroup>
