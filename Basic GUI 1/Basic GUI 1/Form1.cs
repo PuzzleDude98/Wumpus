@@ -106,6 +106,7 @@ namespace Basic_GUI_1
                     break;
 
                 case "shoot":
+                    MessageBox.Show("You shot " + direction + "!");
                     (bool success, string arrows) = placeholderShoot(); // Process shoot - replace with GameControl method
                     break;
                 default:
@@ -206,6 +207,7 @@ namespace Basic_GUI_1
         private void buttonCharacter_Click(object sender, EventArgs e)
         {
             CharacterSelect characterSelect = new CharacterSelect();
+            characterSelect.Costume = Costume;
             characterSelect.ShowDialog();
             Costume = characterSelect.Costume;
             ResetShoot();
